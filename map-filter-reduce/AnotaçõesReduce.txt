@@ -1,0 +1,29 @@
+O que é o Reduce?
+
+Diferente do Filter ou do Map ele não vai retornar outro array.
+
+• Executa uma função em todos os elementos do array, retornando valor único.
+
+Exemplo: Tenho uma pilha de blocos, vou executar uma função JS e eu vou juntar todos esses blocos e retornar apenas um valor. Esse valor pode ser um array mas não necessariamente, pode ser uma String, um Numero, porém vai ser um valor diferente do que a gente mandou iniciamente no nosso array.
+=====================================================================
+
+Reduce sintaxe:  
+• array.reduce(callbackFn, initialValue);
+
+Callback: função a ser executada a partir do acumulador. 
+initialValue(opcional): valor sobre o qual o retorno final irá atuar.
+
+Exemplo: 
+  • O que podemos acessar dentro dessa função de callback:
+
+// accumulador/prevValue = valor acumulador, acumulador de todas as chamadas de callbackFn;
+// currentValue = valor atual, elemento atual sendo acessado pela função;
+// index = index do valor atual;
+// array = o array original onde a função de reduce foi  chamada;
+ 
+Sintaxe:
+const callbackFn = function(accumulador, currentValue, index, array){
+  // do something
+}
+
+array.reduce(callbackFn, initialValue)

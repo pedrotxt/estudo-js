@@ -1,0 +1,37 @@
+Paradigmas da programação                                            | Paradigmas
+                                                                     | Os programas são "objetos" que possuem uma série de propriedades.
+Imperativo e o Declarativo                                           | 
+                                                                     | Pilares:
+Imperativo = ele sempre foca em como você vai resolver os problemas. | - Herança
+Declarativo = foca em o que você vai fazer                           | - Polimorfismo
+                                                                     | - Encapsulamento
+Formar de programar                                                  | - Abstração
+=====================================================================| ==================================================================
+
+                                                              PILARES
+
+ • Abstração: Exemplo com Carro
+-Exemplo: É um veiculo motorizado de quatro rodas =>(abstrai) - É um veiculo com rodas =>(abstrai) - É um veiculo ;
+Ou seja = generalizando mais ou simplificar cada vez mais.
+
+ • Herança: O objeto filho herda propriedades e métodos do objeto pai. Porem o objeto filho ainda contem as suas proprias caracteristicas.
+
+ • Encapsulamento: Cada classe tem propriedades métodos independente do restante do código.
+-Exemplo: Aquele propriedade pertence aquela classe, se aquela propriedade mudar de valor vai alterar apenas aquela classe e não vai influenciar no restante do código.
+
+ • Polimorfismo: Objetos podem herdar a mesma classe pai, mas se comportam de forma diferente quando invocamos seus métodos.
+-Exemplo: A classe pai é falar, os objetos herdam essa classe porém o cachorro late, o pato faz quack e o gato miau, assim se comportando de formas diferentes.
+=========================================================================================================================================
+
+                                                               OOJS
+
+Protótipos: São basicamente um esqueleto de todos os objetos, então todos objetos em JS vão herdar propriedades e métodos de um prototype(prototipo).
+
+Classes: Não existem nativamente. Todas as classes são objetos e a herança se dá por protótipos.
+Syntatic sugar: uma sintaxe feita para facilitar a escrita 
+=========================================================================================================================================
+
+
+
+
+

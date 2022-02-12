@@ -1,0 +1,14 @@
+DOM
+
+Integarindo com css usando JS
+
+varr heading2 = document.getElementsByTagName('h1')[0]
+undefined
+
+heading2.style.color = 'red'
+
+heading2
+<h1>​Olá, Mundo!​</h1>​
+
+heading2.style.color = 'red'
+'red'

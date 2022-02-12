@@ -1,0 +1,46 @@
+ 
+ - Map:
+• Não modifica o array original, o retorno dessa função vai ser um novo array;
+• Realiza as operações em ordem. (Do começo do array - index 0 ao ultimo index ele vai executar a mesma operação para cada elemento);
+
+Map sintaxe: 
+Vai pegar o seu array e dar um .map, podendo receber dois itens, •callback e •thisArg;
+• array.map(callback, thisArg);
+===============================================================================================================================
+
+ - Callback: 
+• Vai ser uma função a ser executada em cada elemento.
+• Dentro do callback a gente tem acesso ao item que você vai modificar, ao index desse item e ao array original
+
+Callback sintaxe:
+• callback(item,index,array)
+===============================================================================================================================
+
+ - thisArg(opcional):
+• Valor de ´this´ dentro da função de callback
+•Apenas se quiser fazer uma operação que vai variar de acordo com um objeto que você tem e que você precisa que essa operação seja feita desse objeto
+===============================================================================================================================
+
+ Map vs forEach
+
+ Os dois fazem uma operação em cada elemento do seu array, mas qual a diferença entre eles?
+
+Exemplo:
+// Usando map
+const array = [1, 2, 3, 4, 5];
+array.map((item) => item * 2); //retorno: [2, 4, 6, 8, 10]
+
+//Usando forEach
+const array = [1, 2, 3, 4, 5];
+array.forEach((item) => item * 2); //retorno: undefined
+
+"((item) => item * 2)" é a minha função de callback, que é onde eu utilizo o item e so quero multiplicar o item por 2
+// Arrow Function
+
+// quando o map retornar o array, ele vai ser um novo array, ou seja, o tanto o array [1, 2, 3, 4, 5] e o [2, 4, 6, 8, 10] vão existir.
+
+// quando o forEach retornar o undefined, vou precisar colocar essa operação dentro de alguma const caso eu queira utilizar o array que resultou dessa operação, ou seja, sem criar um outro.
+
+Diferenças :
+• Valor de retorno
+• Considere se o array auxiliar será necessário

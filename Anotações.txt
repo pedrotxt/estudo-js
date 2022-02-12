@@ -1,0 +1,27 @@
+Variavel = Pode ser alterado o valor
+
+Constante = Não pode ser alterado o valor
+
+Ex: Aplicando um desconto ao preço de um produto.
+
+Variavel:
+var preco = 2;
+var desconto = 0.2;
+preco = preco - desconto;
+
+Constante:
+const PRECO = 2; (é uma boa pratica colocar const em maiusculo)
+var desconto = 0.2;
+var total = PRECO - desconto;
+
+---------------------------------------------------------------
+
+Função:
+SINTAX DE UMA FUNÇÂO:
+
+function soma(declarar parametros = a, b) {
+     console.log(a + b);
+     return a + b;
+}
+
+soma(3,5);

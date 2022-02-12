@@ -1,0 +1,111 @@
+O que é o DOM?
+
+Document Object Model
+
+O DOM HTML é um padrão de como acessar e modificar os elementos HTML de uma página.
+Quando falamos de DOM estamos falando dos nós que representam cada elemento HTML de uma página. 
+
+Diferenças 
+DOM VS BOM
+
+O que é o BOM?
+
+Browser Object Model
+
+O BOM é a arvore de depedencias que existe dentro de uma janela do browser, onde a janela em si fica acima do nosso DOM que é representado pelo document que é um dos filhos do BOM.
+
+                        -Window -
+[ document ] [history] [location] [screen] [navigator]
+
+ou seja BOM é tudo que está dentro do objeto window faz parte do Browser Object Model.
+=============================================================================================================================
+
+Métodos
+Manipulando o DOM
+
+A partir do meu documento HTML eu posso por exemplo procurar por algum elemento HTML especifico
+Exemplo: document.getElementById('titulo');
+e isso dentro do html estaria:
+Exemplo: <h1 id="titulo">Minha Página</h1>
+
+Procurar um elemento pelo nome da tag
+Exemplo: document.getElementsByTagName('li');
+
+Procurar um elemento pelo nome da classe
+Exemplo: document.getElementsByClassName('textos');
+
+Procurar um elemento usando query para uma busca personalizada
+// Selecionar um elemento que tenha duas classes
+Exemplo: document.querySelectorAll('.primeira-classe .segunda-classe');
+
+// Fazendo uma busca combinando tag e uma classe
+Exemplo: document.querySelectorAll('li .opcao');
+// vai retornar tudo no codigo tenha uma tag li e que tenha uma classe opcao dentro dela.
+==========================================================================================================================
+
+Manipular estilos de elementos HTML = Element.classList
+
+Exemplo:
+
+HTML
+<div id="meu-elemento" class="classe">
+</div>
+
+-->
+
+JS
+const meuElemento = document.getElementById("meu-elemento")
+
+meuElemento.classList.add("novo-estilo");
+// Adiciona a classe "novo-estilo"
+
+meuElemento.classList.remove("classe");
+// Remove a classe "classe"
+
+meuElemento.classList.toggle("dark-mode");
+// Adiciona a classe "dark-mode" caso ela não faça parte da
+// lista e remove ela caso faça.
+
+-->
+
+HTML
+<div id="meu-elemento" class="novo-estilo", "dark-mode">
+</div>
+
+Agora para colocar estilo direto do CSS de um elemento
+Antes estavamos apenas manipulando as classes ja prontas do CSS
+Exemplo:
+document.getElementByTagName("p").style.color = "blue";
+=================================================================================================================================
+
+O que são eventos? Qualquer tipo de ação que o usuario faça numa página / quando ele interage com um elemento daquela página.
+
+Alguns TIPOS de EVENTOS:
+
+Evento do mouse: mouseover, mouseout
+
+Evento de click: click, dbclick
+
+Evento de atualização: Change, load
+
+Acionando esses Eventos:
+
+Event listener
+Diretamente no Javascipt, cria um evento que vai ser acionado no momento em que o usuário realizar determinada ação.
+
+const botao = document.getElementById("meuBotao");
+
+botao.addEventListener("click", outraFuncao);
+
+Atributo HTML
+
+<h1 onclick="mudatexto(this)">Clique aqui!</h1>
+
+<script>
+  function mudaTexto(id) {
+    id.innerHTML = "Mudei!";
+  }
+</script>
+
+E no html sempre colocamos o "on" na frente do nome do evento, exemplo: onclick, onmouseover; diferente no js que so precisamos por o nome do evento.
+

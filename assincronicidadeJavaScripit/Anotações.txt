@@ -1,0 +1,85 @@
+Definição Assíncronicidade
+
+Assíncrono - "Que não ocorre ou não se efetiva ao mesmo tempo."
+
+O javascripit roda de maneira sincrona, fazendo uma coisa determina por vez.
+no assincrono a gente pode fazer uma coisa enquanto faz outra também.
+=============================================================================================================================
+
+Promises - é um objeto de processamento assincrono.
+
+Ela trabalha como se fosse uma promessa mesmo -
+
+Inicialmente seu valor é desconhecido: Promise
+Ela pode então, ser resolvida: .then()
+ou rejeitada: .catch()
+
+Uma promise pode ter 3 estados
+1) Pending
+2) Fulfilled
+3) Rejected
+
+Estrutura - 
+Instanciar ela e passar os parametros dentro da função dela, exemplo:
+
+const myPromise new Promise((resolve, reject)) => {
+  window.setTimeout(() => {
+    resolve(console.log('Promise foi Resolvida!'));
+  }, 2000);
+});
+
+// depois de 2 segundos da execução da minha Promise, mandar o metodo para resolve e em seguida um log dizendo
+que a Promise foi Resolvida!
+
+Quando uma promise é resolvida você consegue utilizar o resultado dela para fazer outras operações
+Exemplo:
+
+await myPromise
+    .then((result) => result + ' passando pelo then')
+    .then((result) => result + ' e agora acabou!')
+    .catch((err) => console.log(err.message));
+
+com o await a gente pode encadiar alguma chamadas, por exemplo o .then e o .catch
+o .then é o comando apos a execução da sua Promise ser bem sucedida
+podendo fazer concatenar e fazer mais de uma operação com o .then
+(result + ' e agora acabou!') - concatenação
+podemos tambem ter um .catch para caso der um erro capturar ele ali mesmo e manipular ele melhor.
+=============================================================================================================================
+
+Async/await - Funções assíncronas precisam dessas duas palavras chave.
+
+A palavra async existe para definir funções assincronas, quando você vai resolver uma Promise
+você precisa dizer que essa é uma função assincrona para que você possa usar a palavra await,
+então o await vai parar seu codigo e dizer = 'espera essa promise resolver', so depois que ja tiver resolvido
+o codigo continua rodando, se você não usar o await ele vai so rodar o codigo passando por cima do Promise
+=============================================================================================================================
+
+O que são uma API
+Application Programming Interface
+
+Uma API é uma forma de intermediar os resultados do back-end com o que é apresentado no front-end.
+Você consegue acessá-la por meio de URLs.
+
+Formato .json
+JSON: JavaScripit Object Notation
+
+É muito comum que APIs retornem seus dados no formato .json, portanto precisamos tratar esses dados
+quando os recebermos.
+
+Método fetch
+Usar o metodo com a seguinte sintaxe:
+ele vai receber a url e algumas opções que você pode passar para ele.
+fetch(url, options)
+e o fetch vai retornar uma Promise, assim podendo usar o encadiamento usando o .then 
+
+fetch(url, options)
+  .then(response => response.json())
+  .then(json => console.log(json))
+
+Sempre tem que converter a sua resposta para json caso ela venha como uma string para que você
+consiga utlizar dentro do javascript.
+
+o fetch retornando uma Promise siginifca que você precisa utilizar o await quando for utilizar o fetch.
+
+fetch - Operações no banco (POST, GET, PUT, DELETE, etc).
+

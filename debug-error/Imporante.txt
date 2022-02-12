@@ -1,0 +1,39 @@
+ECMAScript Error
+Tratamento de Erros
+
+Ele é um erro que acontece em tempo de execução, mostrando a linha onde o erro aconteceu.
+=====================================================================================================================
+Document Object Model Expection
+DOMExpection
+Tratamento de Erros
+
+Ele ta envolvido no contexto quando a gente ta relacionando nosso codigo js a uma pagina da web.
+São erros relacionados ao nosso codigo sendo rodados em uma pagina da web.
+=====================================================================================================================
+"trhow" e "return"
+
+Trhow vai tratar as coisas como sendo um erro mesmo, ja quando da o return ele apenas retorna uma string
+=====================================================================================================================
+try/catch
+
+Try...catch
+
+Basicamente dentro do boco try voce vai verificar se o codigo ali dentro daquele pedaço do codigo tiver algum tipo
+de erro ele vai ser capturado dentro do catch podendo manipular esse erro da maneira que vc preferir.
+
+Finally
+
+É uma função que vai ser chamada indepente se tiver um erro não, é um pedaço de codigo que vai executar depois todas
+as verificações do trycatch de qualquer forma.
+=====================================================================================================================
+Objeto Error
+
+Error aceita (message, fileName, lineNumber)
+
+como declarar esse Erro ?
+criar uma constante e dar nome a ela, em seguida fazer o instanciamento " = new Error('Mensagem aqui');"
+
+depois se eu der um "throw Error" ele vai retornar a mensagem mais um indicativo do erro.
+
+voce pode dar nome ao seu erro com NomeDaConstate.name = 'Nome aqui';
+e quando executar o throw vai aparecer la o nome inserido aqui.
