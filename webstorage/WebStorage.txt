@@ -1,0 +1,30 @@
+Cookies: Alguns valores que você pode salvar no navegador do usuario, por exemplo: salvar qual foi a ultima vez que esse usuario entrou no meu site, quero salvar qual foi a ultima que ele acessou no meu site. Você pode salvar isso e quando fecha o navegador, ainda fica salvo naquele cookie, pra quando ele entrar de novo, ou quando você quiser utilizar de alguma forma quando ele entrar.
+
+Sessons: É quase a mesma coisa que o cookie, porem são temporarios, o usuario ta utilizando la no momento, e quando ele fecha, aquela sessão encerra, você perde aqueles dados, por exemplo os bancos, vendo meu saldo e etc., quando eu saio e volto de novo eu tenho que logar de novo, eu perdi a sessão.
+
+Temos dois tipos de forma de salvar dados no JS ( Web Storage ) - Que são: localStorage, sessionStorage.
+
+localStorage, vamos salvos localmente no navegador do usuario, e quando fechamos, ele continua salvo la, praticamente quase igual ao cookie(cookies);
+
+Scripts:
+--Para salvar os dados:
+Passando no primeiro Parametro uma chave e no segundo o valor
+ * localStorage.setItem("nome", "Matheus")
+--Para ver os valores:
+Passando a chave para acessar os valores
+ * localStorage.getItem("nome")
+--Para remover um valor:
+Passando a chave também
+ * localStorage.removeItem("nome")
+
+Agora sendo mais pratico:
+--Para salvar os dados:
+ * localStorage.nome = "Matheus";
+--Para ver os valores:
+ * localStorage.nome;
+--Para passar uma lista
+ * localStorage.lista = ["Pedro", 23]
+
+sessionStorage, funciona quando seu navegador está aberto, se você fechar seu navegador ele perde esse sessionStorage, praticamente como a sessão(sessons);
+
+Os Scripts são os mesmos do localStorage, diferença que no lugar de localStorage colocar sessionStorage;

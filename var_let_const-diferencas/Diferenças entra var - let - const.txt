@@ -1,0 +1,2 @@
+O Let conseguimos acessar apenas no Escopo em que ele está, se ele for criado dentro de um if por exemplo, ele vai conseguir ser acessado apenas dentro daquele if, diferentemente da Var, que é global e podemos acessar seu valor em todo o Escopo do projeto.
+A Constante não pode ser alterada depois de ja definida.
